@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,11 +15,65 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: ;
 }
 
 .content {
   width: 100%;
-  height: 90vh;
-  margin: 50px 70px ;
+  height: 100%;
+  padding: 50px 70px;
+}
+
+.btn {
+  background-color: #313899 !important;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #313899 !important;
+  border: none !important;
+}
+
+.my-card {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  width: 40vw;
+  padding: 20px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+}
+
+.actions {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-text-head {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #747488;
+}
+
+.card-text {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #313899;
+}
+
+.my-badge {
+  width: 70%;
+  font-size: 12px;
+  font-weight: 500;
+  color: #F6AE4C;
+  background-color: #FDF0DD;
 }
