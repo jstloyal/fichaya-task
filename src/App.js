@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import NotificationsSharpIcon from '@material-ui/icons/NotificationsSharp';
 import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
@@ -20,33 +20,76 @@ function App() {
           <ul className="header">
             <li>
               <div>
-                <Link to='/'>
+                <NavLink to='/'>
                   <img src='https://www.fichaya.com/fichaya.ico' alt="Logo" className="logo" />
-                </Link>
+                </NavLink>
               </div>
             </li>
             <li>
               <ul className="pages text-muted">
                 <li>
-                  <Link to='/' className="header-anchor">DASHBOARD</Link>
+                  <NavLink 
+                    exact
+                    to='/'
+                    className="header-anchor"
+                    activeStyle={{borderBottom: '3px solid #313899', color: '#323899', paddingBottom: '1em'}}
+                  >
+                    DASHBOARD
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to='/customers' className="header-anchor">CUSTOMERS</Link>
+                  <NavLink 
+                    to='/customers' 
+                    className="header-anchor"
+                    activeStyle={{borderBottom: '3px solid #313899', color: '#323899', paddingBottom: '1em'}}
+                  >
+                    CUSTOMERS
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to='/associates' className="header-anchor">ASSOCIATES</Link>
+                  <NavLink 
+                    to='/associates' 
+                    className="header-anchor"
+                    activeStyle={{borderBottom: '3px solid #313899', color: '#323899', paddingBottom: '1em'}}
+                  >
+                    ASSOCIATES
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to='/requests' className="header-anchor">REQUESTS</Link>
+                  <NavLink 
+                    to='/requests' 
+                    className="header-anchor"
+                    activeStyle={{borderBottom: '3px solid #313899', color: '#323899', paddingBottom: '1em'}}
+                  >
+                    REQUESTS
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to='/schedules' className="header-anchor">SCHEDULES</Link>
+                  <NavLink 
+                    to='/schedules' 
+                    className="header-anchor"
+                    activeStyle={{borderBottom: '3px solid #313899', color: '#323899', paddingBottom: '1em'}}
+                  >
+                    SCHEDULES
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to='/payments' className="header-anchor">PAYMENTS</Link>
+                  <NavLink 
+                    to='/payments' 
+                    className="header-anchor"
+                    activeStyle={{borderBottom: '3px solid #313899', color: '#323899', paddingBottom: '1em'}}
+                  >
+                    PAYMENTS
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to='/settings' className="header-anchor">SETTINGS</Link>
+                  <NavLink 
+                    to='/settings' 
+                    className="header-anchor"
+                    activeStyle={{borderBottom: '3px solid #313899', color: '#323899', paddingBottom: '1em'}}
+                  >
+                    SETTINGS
+                  </NavLink>
                 </li>
               </ul>
             </li>
