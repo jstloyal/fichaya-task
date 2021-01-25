@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,6 +35,10 @@ a:hover {
 .btn:hover {
   background-color: #313899 !important;
   border: none !important;
+}
+
+.my-btns {
+  width: 180px !important;
 }
 
 .my-card {

@@ -58,7 +58,7 @@ function Requests() {
             title="Actions"
             id="dropdown-menu-align-responsive-2"
             drop="up"
-            className="my-btn actions float-right"
+            className="my-btns actions float-right"
           >
             <Dropdown.Item eventKey="1">Contact customer</Dropdown.Item>
             <Dropdown.Item eventKey="2">Generate invoice</Dropdown.Item>
