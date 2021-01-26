@@ -1,0 +1,80 @@
+.my-invoice {
+  width: 100%;
+}
+
+.my-invoice p {
+  font-size: 13px;
+  color: #747488;
+}
+
+.invoice-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.invoice-card {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  width: 48%;
+  min-height: 400px;
+  padding: 35px;
+}
+
+.total {
+  background-color: #EDEDED;
+  border: none;
+  height: 50px !important;
+}
+
+.invoice-btn {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  width: 48%;
+  height: 55px;
+  background-color: #fff !important;
+  color: #313899;
+  font-size: 15px;
+  border: 1px solid #313899;
+  border-radius: 5px;
+}
+
+.cancel-btn:hover {
+  background-color: #313899 !important;
+  color: #fff;
+}
+
+.submit-btn {
+  width: 48%;
+  height: 55px;
+  font-size: 15px;
+  background-color: #DEA129 !important;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #fff !important;
+  color: #DEA129;
+  border: 1px solid #DEA129 !important;
+  border-radius: 5px;
+}
+
+.form-line {
+  border: 1px solid #DEA129 !important;
+  height: 50px !important;
+  font-size: 15px;
+}
+
+.form-line:hover {
+  border: 1px solid #DEA129 !important;
+}
+
+.form-label {
+  font-size: 12px;
+  color: #747488;
+}
