@@ -11,6 +11,8 @@ import Associates from './pages/Associates';
 import Payments from './pages/Payments';
 import Settings from './pages/Settings';
 import Schedules from './pages/Schedules';
+import InvoiceForm from './components/Invoice/InvoiceForm';
+import GenerateInvoice from './components/Generated-Invoice/Invoice';
 
 function App() {
   return (
@@ -114,6 +116,8 @@ function App() {
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/schedules" component={Schedules} />
           <Route exact path="/payments" component={Payments} />
+          <Route path="/invoice" component={InvoiceForm} />
+          <Route path="/generate-invoice" component={GenerateInvoice} />
         </Switch>
       </div>
     </Router>

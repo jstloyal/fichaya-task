@@ -1,7 +1,8 @@
 import React from 'react';
+import { Switch, Route, NavLink } from 'react-router-dom';
 import { Button, Card, Badge, DropdownButton, SplitButton, Dropdown } from 'react-bootstrap';
+import InvoiceForm from '../components/Invoice/InvoiceForm';
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
-import { Link } from 'react-router-dom';
 
 function Requests() {
   return (
@@ -61,11 +62,14 @@ function Requests() {
             className="my-btns actions float-right"
           >
             <Dropdown.Item eventKey="1">Contact customer</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Generate invoice</Dropdown.Item>
+            <Dropdown.Item eventKey="2"><NavLink to="/invoice">Generate invoice</NavLink></Dropdown.Item>
             <Dropdown.Item eventKey="3">Reject request</Dropdown.Item>
           </SplitButton>
         </div>
       </Card>
+      <Switch>
+        <Route exact path="/invoice" component={InvoiceForm} />
+      </Switch>
     </div>
   );
 };
