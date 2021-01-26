@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.my-invoice p {
+  font-size: 13px;
+  color: #747488;
+}
+
 .invoice-form {
   display: flex;
   flex-direction: row;
@@ -63,6 +68,10 @@
   border: 1px solid #DEA129 !important;
   height: 50px !important;
   font-size: 15px;
+}
+
+.form-line:hover {
+  border: 1px solid #DEA129 !important;
 }
 
 .form-label {
