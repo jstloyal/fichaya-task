@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { useForm } from 'react-hook-form';
 import { Card, Form, Row, Col, Button } from 'react-bootstrap';
 import './InvoiceForm.styles.css';
 
 function InvoiceForm() {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
+  const [formInput, setFormInput] = useState({
+    name: '',
+    description: '',
+    total: 0,
+    address: '',
+    phone: 0,
+    issue: '',
+    due: '',
+    email: '',
+    invoiceNum: 0,
+    vat: 0,
+    amount: 0,
+  });
+
+  const fillForm = event => {
+    setFormInput({...formInput, [event.target.name]: event.target.value})
+  };
 
   const onSubmit = data => console.log(data);
 
   return (
     <div className="my-invoice">
       <Form onSubmit={handleSubmit(onSubmit)}>
+      <Button size="sm" className="my-btn">Generate invoice</Button>
       <p className="mt-2">ENTER INVOICE INFO</p>
       <div className="invoice-form">
         <Card className="invoice-card">
@@ -19,7 +37,9 @@ function InvoiceForm() {
             <Form.Control 
               type="text"
               name="name"
-              ref={register}
+              value={formInput.name}
+              onChange={fillForm}
+              ref={register({required: true})}
               className="form-line"
               placeholder="Spleet Limited"
             />
@@ -31,7 +51,9 @@ function InvoiceForm() {
                 <Form.Control 
                   type="email"
                   name="email"
-                  ref={register}
+                  value={formInput.email}
+                  onChange={fillForm}
+                  ref={register({required: true})}
                   className="form-line"
                   placeholder="info@spleet.ng"
                 />
@@ -43,7 +65,9 @@ function InvoiceForm() {
                 <Form.Control 
                   type="number"
                   name="phone"
-                  ref={register}
+                  value={formInput.phone}
+                  ref={register({required: true})}
+                  onChange={fillForm}
                   className="form-line"
                   placeholder="+2348168090727"
                 />
@@ -55,7 +79,9 @@ function InvoiceForm() {
             <Form.Control 
               type="text"
               name="address"
+              value={formInput.address}
               ref={register}
+              onChange={fillForm}
               className="form-line"
               placeholder="51, Iwaya Road, Onike, Iwaya"
             />
@@ -68,8 +94,10 @@ function InvoiceForm() {
                 <Form.Label>Issue date</Form.Label>
                 <Form.Control 
                   type="date"
-                  name="issue-date"
+                  name="issue"
+                  value={formInput.issue}
                   ref={register}
+                  onChange={fillForm}
                   className="form-line"
                   placeholder="20/01/2021"
                 />
@@ -80,8 +108,10 @@ function InvoiceForm() {
                 <Form.Label>Due date</Form.Label>
                 <Form.Control 
                   type="date"
-                  name="due-date"
+                  name="due"
+                  value={formInput.due}
                   ref={register}
+                  onChange={fillForm}
                   className="form-line"
                   placeholder="05/05/2021"
                 />
@@ -94,8 +124,10 @@ function InvoiceForm() {
                 <Form.Label>Invoice number</Form.Label>
                 <Form.Control 
                   type="number"
-                  name="invoice-num"
+                  name="invoiceNum"
+                  value={formInput.invoiceNum}
                   ref={register}
+                  onChange={fillForm}
                   className="form-line"
                   placeholder="000000001"
                 />
@@ -107,7 +139,9 @@ function InvoiceForm() {
                 <Form.Control 
                   type="number"
                   name="vat"
+                  value={formInput.vat}
                   ref={register}
+                  onChange={fillForm}
                   className="form-line"
                   placeholder="7.5%"
                 />
@@ -119,7 +153,9 @@ function InvoiceForm() {
             <Form.Control 
               type="text"
               name="description"
+              value={formInput.description}
               ref={register}
+              onChange={fillForm}
               className="form-line"
               placeholder="5 Bedroom Duplex post-con cleaning"
             />
@@ -131,7 +167,9 @@ function InvoiceForm() {
                 <Form.Control 
                   type="number"
                   name="amount"
+                  value={formInput.amount}
                   ref={register}
+                  onChange={fillForm}
                   className="form-line"
                   placeholder="NGN 45,000"
                 />
@@ -143,7 +181,9 @@ function InvoiceForm() {
                 <Form.Control 
                   type="number"
                   name="total"
+                  value={formInput.total}
                   ref={register}
+                  onChange={fillForm}
                   placeholder="NGN 48,375"
                   className="total"
                 />

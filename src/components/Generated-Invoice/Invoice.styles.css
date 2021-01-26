@@ -1,0 +1,107 @@
+.invoice {
+  width: 43%;
+}
+
+.invoice-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  width: 48%;
+  background-color: #fff !important;
+  height: 50px;
+  color: #313899;
+  font-size: 15px;
+  border: 1px solid #313899;
+  border-radius: 5px;
+}
+
+.back-btn:hover {
+  background-color: #313899 !important;
+  color: #fff;
+}
+
+.send-btn {
+  width: 48%;
+  height: 50px;
+  font-size: 15px;
+  background-color: #DEA129 !important;
+  color: #fff;
+}
+
+.send-btn:hover {
+  background-color: #fff !important;
+  color: #DEA129;
+  border: 1px solid #DEA129 !important;
+  border-radius: 5px;
+}
+
+.invoice P {
+  font-size: 13px;
+  color: #747488;
+}
+
+.invoice-info {
+  padding: 30px;
+  height: 550px;
+  width: 100%;
+  margin: 0px !important;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.logos {
+  width: 30px;
+  height: 30px;
+}
+
+.invoice-item,
+.receipt-info,
+.subTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-width {
+  width: 100%;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.totalDiv {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-top: 20px;
+}
+
+.subTotal {
+  border-top: 1px solid #747488;
+}
+
+.subTotal3 {
+  border-bottom: 1px solid #747488;
+}
+
+.my-table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tableHead tr th {
+  padding: 0px !important;
+  font-size: 15px;
+  font-weight: 500 !important;
+}
+
+.tableBody tr td {
+  padding: 0px !important;
+  font-size: 13px;
+  font-weight: 500 !important;
+}
