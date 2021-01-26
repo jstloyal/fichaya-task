@@ -1,6 +1,7 @@
 import React from 'react';
 import './Invoice.styles.css';
 import { Button, Card, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Invoice({email, name, description, amount, total, phone, issue, due, invoiceNum, vat, address}) {
   return (
@@ -83,7 +84,7 @@ function Invoice({email, name, description, amount, total, phone, issue, due, in
           </div>
         </Card>
         <div className="invoice-button mt-4">
-          <Button className="back-btn">GO BACK</Button>
+          <Button className="back-btn"><Link to="/invoice">GO BACK </Link></Button>
           <Button className="send-btn">
             SEND TO CUSTOMER
           </Button>

@@ -207,7 +207,6 @@ function InvoiceForm() {
         </div>
         </Form>
       </div>
-      <Route path="/generate-invoice" component={GenerateInvoice} />
     </div>
   );
 };
