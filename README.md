@@ -33,12 +33,16 @@
 - Fichaya take home project.
 
 <p align="center">
-    <img src="src/assets/fichaya.png" alt="project-image">
+    <img src="src/assets/fichaya.png" alt="project-image" >
+</p>
+
+<p align="center">
+    <img src="src/assets/Fichaya1.mp4" alt="project-image" >
 </p>
 
 ## Live Link (Netlify)
 
-[Project live link]()
+[Project live link](https://wizardly-franklin-7a8f05.netlify.app/invoice)
 
 ### Built With
 
